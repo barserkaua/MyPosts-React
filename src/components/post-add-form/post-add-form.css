@@ -1,0 +1,44 @@
+* {
+    box-sizing: border-box;
+}
+
+.posts-input {
+    padding-top: 5%;
+    position: relative;
+}
+
+.create-form{
+    position: relative;
+    width: 500px;
+    height: auto;
+    margin: 48px 30% 40px;
+
+    background: #FFFBFB;
+    border: 1px solid #000000;
+    border-radius: 29px;
+
+}
+
+.add-post-btn {
+    text-align: left;
+    border-top-right-radius: 29px;
+    border-top-left-radius: 29px;
+    width: 100%;
+}
+
+.subject {
+    width: 100%;
+    border: 0;
+    padding: 6px 10px;
+    border-bottom: 1px solid silver;
+}
+
+.padding-note {
+    padding: 1px 20px 1px 20px;
+}
+
+.note {
+    width: 100%;
+    border: 0;
+    padding: 6px 10px;
+}
