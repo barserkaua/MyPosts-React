@@ -1,18 +1,23 @@
 import React, {Component} from "react";
 import './App.css';
 import Header from "../header";
-import Posts from "../posts";
+import PostList from "../post-list";
 import PostAddForm from "../post-add-form";
 
 export default class App extends Component {
     constructor(props) {
         super(props);
         this.state = {
-            body: ''
-        }
+            data: [
+            {subject: 'Vasyl', note: 'Hello World!', date: '07 April 2021'},
+            {subject: 'Alex', note: 'Some text!', date: '31 June 2021'},
+            {subject: 'Max', note: 'Can you did it, Sucker!?', date: '25 September 2020'},
+        ]}
     }
 
     render() {
+        const {data} = this.state;
+
         return (
 
             <div>
@@ -20,7 +25,7 @@ export default class App extends Component {
                 <div className=''>
                     <PostAddForm/>
                 </div>
-                <Posts/>
+                <PostList posts={data}/>
             </div>
         );
     }

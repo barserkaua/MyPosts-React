@@ -1,0 +1,91 @@
+* {
+    box-sizing: border-box;
+}
+
+.posts-output {
+    position: relative;
+    width: 277px;
+    height: auto;
+
+    background: #FCFAFA;
+    border: 1px solid #000000;
+    box-sizing: border-box;
+    border-radius: 29px;
+    margin: 30px 39% 40px;
+}
+
+.posts-output-subject {
+    position: relative;
+    padding: 15px 20px 10px 20px;
+    word-wrap: break-word;
+}
+
+.posts-output-note {
+    position: relative;
+    padding: 5px 20px 5px 20px;
+    word-wrap: break-word;
+    border-top: 2px solid silver;
+}
+
+.posts-output-data {
+    position: relative;
+    padding-left: 150px;
+    padding-bottom: 15px;
+}
+
+.posts-output-media {
+    position: relative;
+    padding-left: 120px;
+    padding-right: 10px;
+    padding-bottom: 5px;
+    border-top: 2px solid silver;
+}
+
+.fa {
+    padding: 10px;
+    font-size: 30px;
+    width: 40px;
+    text-align: center;
+    text-decoration: none;
+    margin: 2px 2px;
+
+}
+
+.fa-instagram:hover {
+    opacity: 0.7;
+    color: #ea4f4f;
+}
+
+.fa-instagram {
+    background: none;
+    color: black;
+    padding: 5px 10px 5px 10px;
+}
+
+.fa-facebook:hover {
+    opacity: 0.7;
+    color: blue;
+}
+
+.fa-facebook {
+    background: none;
+    color: black;
+    padding: 5px 10px 5px 10px;
+}
+
+.fa-facebook {
+    background: none;
+    color: black;
+    padding: 5px 10px 5px 10px;
+}
+
+.fa-share-square:hover {
+    opacity: 0.7;
+    color: #1a8616;
+}
+
+.fa-share-square {
+    background: none;
+    color: black;
+    padding: 5px 10px 5px 10px;
+}
