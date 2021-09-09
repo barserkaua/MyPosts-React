@@ -5,7 +5,7 @@ import './post-list-item.css';
 export default class PostListItem extends Component {
 
     render() {
-        const {subject, note, data} = this.props;
+        const {subject, note} = this.props;
         return (
             <div className="d-inline p-2">
                 <div className='posts-output'>

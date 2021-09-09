@@ -6,13 +6,13 @@ const PostList = ({posts}) => {
 
     const elements = posts.map((item) => {
        return (
-           <ul className='list-group list-group-horizontal'>
-               <li>
-                   <PostListItem
-                       subject={item.subject}
-                       note={item.note}
-                       date={item.date}/>
-               </li>
+           <ul className='inline-block'>
+                <div>
+                    <PostListItem
+                        subject={item.subject}
+                        note={item.note}
+                        date={item.date}/>
+                </div>
            </ul>
        )
     });
