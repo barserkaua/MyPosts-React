@@ -6,7 +6,7 @@ const PostList = ({posts}) => {
 
     const elements = posts.map((item) => {
        return (
-           <ul className='inline-block'>
+           <ul key={item.id} className='inline-block'>
                 <div>
                     <PostListItem
                         subject={item.subject}

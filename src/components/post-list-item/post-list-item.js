@@ -10,7 +10,9 @@ export default class PostListItem extends Component {
             <div className="d-inline p-2">
                 <div className='posts-output'>
                     <div className='posts-output-subject'>
-                        {subject}
+                        <a href='#' className='post-info'>
+                            {subject}
+                        </a>
                     </div>
                     <p className='posts-output-note'>
                         {note}
@@ -21,7 +23,7 @@ export default class PostListItem extends Component {
                     <div className='posts-output-media'>
                         <a href="https://www.instagram.com/check__mate___/" target='_blank' className="fa fa-instagram"></a>
                         <a href="https://www.facebook.com/barserka/" target='_blank' className="fa fa-facebook"></a>
-                        <a onClick='' className="fa fa-share-square"></a>
+                        <a className="fa fa-share-square"></a>
                     </div>
                 </div>
             </div>
