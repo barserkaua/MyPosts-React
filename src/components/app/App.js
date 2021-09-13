@@ -4,6 +4,7 @@ import nextId from "react-id-generator";
 import Header from "../header";
 import PostList from "../post-list";
 import PostAddForm from "../post-add-form";
+import PostItem from "../post-item";
 
 import {BrowserRouter as Router, Route} from 'react-router-dom';
 
@@ -13,11 +14,12 @@ export default class App extends Component {
         super(props);
         this.state = {
             data: [
-            {subject: 'Vasyl', note: 'Hello World!', date: '07 April 2021', id:nextId()},
+            {subject: 'Vasyl', note: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Architecto commodi exercitationem ipsum modi placeat, sint\n' +
+                    '    soluta vel! Atque, molestiae, tenetur. Adipisci distinctio doloremque dolorum enim libero minima praesentium totam\n' +
+                    '    voluptas!', date: '07 April 2021', id:nextId()},
             {subject: 'Alex', note: 'Some text!', date: '31 June 2021', id:nextId()},
             {subject: 'Max', note: 'Can you did it, Sucker!?', date: '25 September 2020', id:nextId()},
         ]};
-        this.nextId = nextId();
     }
 
     addItem = (bodySub, bodyNote) => {
@@ -49,10 +51,17 @@ export default class App extends Component {
                     <Header/>
                     <div className='container'>
                         <div className=''>
-                            <PostAddForm onAdd={this.addItem}/>
+                            <Route path='/' exact component={() => {return (<PostAddForm onAdd={this.addItem}/>)}}/>
                         </div>
-                        <Route path='/some' exact={true} component={() => <h1>Welcome to my posts</h1>}/>
-                        <PostList posts={data}/>
+                        <Route path='/' exact component={() => {return (<PostList posts={data}/>)}}/>
+                    </div>
+                    <div className='container-post-detail'>
+                        <Route path='/:id' exact
+                               render={
+                                   ({match}) => {
+                                       const {id} = match.params;
+                                       return <PostItem postId={id} post={data}/>
+                                   }}/>
                     </div>
                 </div>
             </Router>

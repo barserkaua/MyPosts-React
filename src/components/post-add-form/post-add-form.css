@@ -20,10 +20,11 @@
 }
 
 .add-post-btn {
+    position: relative;
     text-align: left;
     border-top-right-radius: 29px;
     border-top-left-radius: 29px;
-    width: 100%;
+    width:480px;
 }
 
 .subject {

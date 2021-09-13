@@ -1,5 +1,6 @@
 import React, {Component} from "react";
 import img from './settings_icon.png';
+import {Link} from 'react-router-dom';
 
 import './header.css';
 
@@ -8,13 +9,13 @@ export default class Header extends Component {
         return (
             <div>
                 <nav className="navbar navbar-expand-sm header">
-                    <a className="logo-btn" href="#">
+                    <Link className="logo-btn" to="/">
                         <p className="logo-name">LOGO</p>
-                    </a>
-                    <a className="settings-link" href="#">
+                    </Link>
+                    <Link className="settings-link" to="#">
                         <img className="img-settings" src={img}/>
                         <p className="text-settings">settings</p>
-                    </a>
+                    </Link>
                 </nav>
             </div>
         )

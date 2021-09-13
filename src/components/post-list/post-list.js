@@ -3,7 +3,6 @@ import PostListItem from "../post-list-item";
 import './post-list.css';
 
 const PostList = ({posts}) => {
-
     const elements = posts.map((item) => {
        return (
            <ul key={item.id} className='inline-block'>
@@ -11,7 +10,8 @@ const PostList = ({posts}) => {
                     <PostListItem
                         subject={item.subject}
                         note={item.note}
-                        date={item.date}/>
+                        date={item.date}
+                        id={item.id}/>
                 </div>
            </ul>
        )

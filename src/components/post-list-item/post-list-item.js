@@ -1,24 +1,25 @@
 import React, {Component} from "react";
+import {Link} from 'react-router-dom';
 
 import './post-list-item.css';
 
 export default class PostListItem extends Component {
 
     render() {
-        const {subject, note} = this.props;
+        const {subject, note, date, id} = this.props;
         return (
             <div className="d-inline p-2">
                 <div className='posts-output'>
                     <div className='posts-output-subject'>
-                        <a href='#' className='post-info'>
+                        <Link to={`/${id}`}  className='post-info'>
                             {subject}
-                        </a>
+                        </Link>
                     </div>
                     <p className='posts-output-note'>
                         {note}
                     </p>
                     <div className='posts-output-data'>
-                        11 June 2011
+                        {date}
                     </div>
                     <div className='posts-output-media'>
                         <a href="https://www.instagram.com/check__mate___/" target='_blank' className="fa fa-instagram"></a>
