@@ -61,6 +61,7 @@
 .fa-instagram:hover {
     opacity: 0.7;
     color: #ea4f4f;
+    text-decoration: none;
 }
 
 .fa-instagram {
@@ -72,12 +73,7 @@
 .fa-facebook:hover {
     opacity: 0.7;
     color: blue;
-}
-
-.fa-facebook {
-    background: none;
-    color: black;
-    padding: 5px 10px 5px 10px;
+    text-decoration: none;
 }
 
 .fa-facebook {
@@ -93,6 +89,7 @@
 
 .fa-share-square {
     background: none;
+    border: none;
     color: black;
     padding: 5px 10px 5px 10px;
 }

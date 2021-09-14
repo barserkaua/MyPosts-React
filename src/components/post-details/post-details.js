@@ -3,8 +3,17 @@ import './post-details.css'
 
 export default class PostDetails extends Component {
 
+    copy = () => {
+        const el = document.createElement('input');
+        el.value = window.location.href;
+        document.body.appendChild(el);
+        el.select();
+        document.execCommand('copy');
+        document.body.removeChild(el);
+    }
+
     render() {
-        const {subject, note, date, id} = this.props;
+        const {subject, note, date} = this.props;
         return (
             <div>
                 <div className='post-window'>
@@ -22,7 +31,7 @@ export default class PostDetails extends Component {
                             <button className='btn btn-outline-secondary'>
                                 Copy to clipboard
                             </button>
-                            <button className='btn btn-outline-secondary'>
+                            <button onClick={this.copy} className='btn btn-outline-secondary'>
                                 Share
                             </button>
                         </div>

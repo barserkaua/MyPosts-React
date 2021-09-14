@@ -5,6 +5,15 @@ import './post-list-item.css';
 
 export default class PostListItem extends Component {
 
+    copy = () => {
+        const el = document.createElement('input');
+        el.value = window.location.href;
+        document.body.appendChild(el);
+        el.select();
+        document.execCommand('copy');
+        document.body.removeChild(el);
+    }
+
     render() {
         const {subject, note, date, id} = this.props;
         return (
@@ -24,7 +33,7 @@ export default class PostListItem extends Component {
                     <div className='posts-output-media'>
                         <a href="https://www.instagram.com/check__mate___/" target='_blank' className="fa fa-instagram"></a>
                         <a href="https://www.facebook.com/barserka/" target='_blank' className="fa fa-facebook"></a>
-                        <a className="fa fa-share-square"></a>
+                        <button onClick={this.copy} className="fa fa-share-square"></button>
                     </div>
                 </div>
             </div>
