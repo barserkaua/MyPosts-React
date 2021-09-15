@@ -37,11 +37,21 @@ export default class PostAddForm extends Component {
         })
     }
 
+    subjectInputChecker = (checker) => {
+        if (checker.length !== 0 ) {
+            return this.onSubmit;
+        } else {
+            //const subject = document.querySelector("button[type='submit']");
+            //return subject;
+            return;
+        }
+    }
+
     render() {
         return(
             <form
                 className='create-form'
-                onSubmit={this.onSubmit}>
+                onSubmit={this.subjectInputChecker(this.state.subject)}>
                 <button
                     type="submit"
                     className="btn btn-light add-post-btn">create new post</button>

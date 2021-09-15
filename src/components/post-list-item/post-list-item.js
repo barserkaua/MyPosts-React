@@ -14,6 +14,15 @@ export default class PostListItem extends Component {
         document.body.removeChild(el);
     }
 
+    handleChangeNoteInput = (event) => {
+        const note = event.slice(0, 200);
+        if (note.length >= 200) {
+            return `${note}...`;
+        } else {
+            return event;
+        }
+    }
+
     render() {
         const {subject, note, date, id} = this.props;
         return (
@@ -25,7 +34,7 @@ export default class PostListItem extends Component {
                         </Link>
                     </div>
                     <p className='posts-output-note'>
-                        {note}
+                        {this.handleChangeNoteInput(note)}
                     </p>
                     <div className='posts-output-data'>
                         {date}

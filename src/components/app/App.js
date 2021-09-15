@@ -7,6 +7,7 @@ import PostAddForm from "../post-add-form";
 import PostItem from "../post-item";
 
 import {BrowserRouter as Router, Route} from 'react-router-dom';
+import moment from "moment";
 
 
 export default class App extends Component {
@@ -19,7 +20,22 @@ export default class App extends Component {
                     '    voluptas!', date: '07 April 2021', id:nextId()},
             {subject: 'Alex', note: 'Some text!', date: '31 June 2021', id:nextId()},
             {subject: 'Max', note: 'Can you did it, Sucker!?', date: '25 September 2020', id:nextId()},
+            {subject: 'Andy', note: 'Python is an easy to learn, powerful programming language. It has efficient high-level data structures and a simple but effective approach to object-oriented programming. Python’s elegant syntax and dynamic typing, together with its interpreted nature, make it an ideal language for scripting and rapid application development in many areas on most platforms.\n' +
+                    '\n' +
+                    'The Python interpreter and the extensive standard library are freely available in source or binary form for all major platforms from the Python web site, https://www.python.org/, and may be freely distributed. The same site also contains distributions of and pointers to many free third party Python modules, programs and tools, and additional documentation.\n' +
+                    '\n' +
+                    'The Python interpreter is easily extended with new functions and data types implemented in C or C++ (or other languages callable from C). Python is also suitable as an extension language for customizable applications.\n' +
+                    '\n' +
+                    'This tutorial introduces the reader informally to the basic concepts and features of the Python language and system. It helps to have a Python interpreter handy for hands-on experience, but all examples are self-contained, so the tutorial can be read off-line as well.\n' +
+                    '\n' +
+                    'For a description of standard objects and modules, see The Python Standard Library. The Python Language Reference gives a more formal definition of the language. To write extensions in C or C++, read Extending and Embedding the Python Interpreter and Python/C API Reference Manual. There are also several books covering Python in depth.', date: '25 September 2020', id:nextId()},
         ]};
+    }
+
+    addDate = () => {
+        let today = moment().format('DD MMMM YYYY');
+
+        return today
     }
 
     addItem = (bodySub, bodyNote) => {
@@ -28,7 +44,7 @@ export default class App extends Component {
             const newItem = {
                 subject: bodySub,
                 note: bodyNote,
-                date: '08 April 2022',
+                date: this.addDate(),
                 id: nextId()
             };
             console.log(newItem.id)
