@@ -33,9 +33,7 @@ export default class App extends Component {
     }
 
     addDate = () => {
-        let today = moment().format('DD MMMM YYYY');
-
-        return today
+        return moment().format('DD MMMM YYYY');
     }
 
     addItem = (bodySub, bodyNote) => {
